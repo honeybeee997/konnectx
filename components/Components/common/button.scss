@@ -1,0 +1,15 @@
+.common-button{
+    padding: 12px 25px;
+    cursor: pointer;
+    background-image: linear-gradient(to top left, #000034, #00c1fe, #00d8fd);
+  border: none;
+  border-radius: 0.25rem;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease-out
+}
+.common-button:hover{
+    background-image: linear-gradient(to top left, #000034, #000034, #02dafe);
+    margin-left: 30px;
+    transition: all ease-in-out 350ms;
+}
