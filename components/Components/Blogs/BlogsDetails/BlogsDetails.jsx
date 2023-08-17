@@ -18,7 +18,6 @@ const BlogsDetails = ({blogs, blogSelected, nextBlog, previousBlog}) => {
 
   const [loader, setLoader] = useState(false);
 
-
   return (
     <>
       <Helmet>

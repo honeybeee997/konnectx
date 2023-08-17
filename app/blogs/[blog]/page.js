@@ -4,7 +4,7 @@ import BlogsDetails from "@/components/Components/Blogs/BlogsDetails/BlogsDetail
 
 
 async function fetchBlogs() {
-  const res = await fetch("https://villaex-cms.herokuapp.com/blog?website=konnectx", {cache: "force-cache"})
+  const res = await fetch("https://villaex-cms.herokuapp.com/blog?website=konnectx")
 
   const data = await res.json()
 
