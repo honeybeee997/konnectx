@@ -15,16 +15,17 @@ async function fetchBlogs() {
 const Page = async () => {
   const blogs = await fetchBlogs()
 
-  const path = headers().get("x-invoke-path")
+  const path = headers().get("x-url") || ""
+  const blogName = path.split("/blogs/")[1]
 
 
   const blogSelected = blogs?.find(
-    (item) => item?.searchurl === path.split("/")[2]
+    (item) => item?.searchurl === blogName
   );
 
   const previousBlog = blogs
     ?.map((item, index) => {
-      if (item?.searchurl === path.split("/")[2]) {
+      if (item?.searchurl === blogName) {
         return blogs[index - 1];
       } else {
         return "";
@@ -34,7 +35,7 @@ const Page = async () => {
 
   const nextBlog = blogs
     ?.map((item, index) => {
-      if (item?.searchurl === path.split("/")[2]) {
+      if (item?.searchurl === blogName) {
         return blogs[index + 1];
       } else {
         return "";
